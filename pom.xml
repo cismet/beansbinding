@@ -68,7 +68,7 @@
                                     <destFileName>beansbinding-1.2.1.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
-                            <outputDirectory>../cidsDistribution/lib/ext</outputDirectory>
+                            <outputDirectory>../../cidsDistribution/lib/ext</outputDirectory>
                             <stripVersion>true</stripVersion>
                         </configuration>
                     </execution>
