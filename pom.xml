@@ -17,6 +17,38 @@
              of the child POMs. -->
         <de.cismet.lib.type>ext</de.cismet.lib.type>
     </properties>
+    <build>
+        <plugins>
+            <!-- overwritten because the artifact has to be renamed du to
+                 compatibility reasons to the cidsDistribution -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-installed</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${project.artifactId}</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>${project.packaging}</type>
+                                    <destFileName>beansbinding-1.2.1.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                            <outputDirectory>../../cidsDistribution/lib/${de.cismet.lib.type}</outputDirectory>
+                            <stripVersion>true</stripVersion>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <dependency>
             <groupId>org.apache.maven.surefire</groupId>
