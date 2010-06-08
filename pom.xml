@@ -10,7 +10,7 @@
 
     <groupId>de.cismet.custom</groupId>
     <artifactId>beansbinding</artifactId>
-    <version>1.2.1</version>
+    <version>1.2.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>beansbinding</name>
@@ -56,10 +56,4 @@
             </plugin>
         </plugins>
     </build>
-
-  <scm>
-    <connection>scm:svn:svn+ssh://repositories/svn/repositories/central/de/cismet/cids/cids-parent/tags/beansbinding-1.2.1</connection>
-    <developerConnection>scm:svn:svn+ssh://repositories/svn/repositories/central/de/cismet/cids/cids-parent/tags/beansbinding-1.2.1</developerConnection>
-    <url>http://repositories:8082/central/browse/de/cismet/cids/cids-parent/tags/beansbinding-1.2.1</url>
-  </scm>
 </project>
