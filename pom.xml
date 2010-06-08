@@ -15,7 +15,13 @@
 
     <name>beansbinding</name>
     <description>!!! description pending !!!</description>
-        
+
+    <scm>
+        <connection>scm:svn:svn+ssh://repositories/svn/repositories/central/de/cismet/custom/beansbinding/trunk</connection>
+        <developerConnection>scm:svn:svn+ssh://repositories/svn/repositories/central/de/cismet/custom/beansbinding/trunk</developerConnection>
+        <url>http://repositories:8082/central/browse/de/cismet/custom/beansbinding/trunk</url>
+    </scm>
+
     <properties>
         <!-- 
             ToDo make constants for the single values to ease the configuration
