@@ -22,7 +22,6 @@ import org.jdesktop.el.impl.util.ReflectionUtil;
 public final class ValueExpressionLiteral extends ValueExpression implements
         Externalizable {
 
-    private static final long serialVersionUID = 1L;
 
     private Object value;
 

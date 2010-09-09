@@ -17,7 +17,6 @@ import org.jdesktop.el.VariableMapper;
 
 public class VariableMapperImpl extends VariableMapper implements Externalizable {
 
-    private static final long serialVersionUID = 1L;
     
     private Map vars = new HashMap();
     

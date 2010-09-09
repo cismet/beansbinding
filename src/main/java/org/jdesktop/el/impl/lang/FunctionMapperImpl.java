@@ -24,7 +24,6 @@ import org.jdesktop.el.impl.util.ReflectionUtil;
 public class FunctionMapperImpl extends FunctionMapper implements
         Externalizable {
 
-    private static final long serialVersionUID = 1L;
     
     protected Map functions = null;
 
