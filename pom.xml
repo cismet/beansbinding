@@ -5,7 +5,7 @@
     <parent>
         <groupId>de.cismet.cids</groupId>
         <artifactId>cids-parent</artifactId>
-        <version>1.0.5</version>
+        <version>2.0-SNAPSHOT</version>
     </parent>
 
     <groupId>de.cismet.custom</groupId>
@@ -16,11 +16,32 @@
     <name>beansbinding</name>
     <description>!!! description pending !!!</description>
 
+    <prerequisites>
+        <maven>3</maven>
+    </prerequisites>
+
     <scm>
-        <connection>scm:svn:svn+ssh://repositories/svn/repositories/central/de/cismet/custom/beansbinding/trunk</connection>
-        <developerConnection>scm:svn:svn+ssh://repositories/svn/repositories/central/de/cismet/custom/beansbinding/trunk</developerConnection>
-        <url>http://repositories:8082/central/browse/de/cismet/custom/beansbinding/trunk</url>
+        <connection>https://github.com/cismet/beansbinding.git</connection>
+        <developerConnection>scm:git:git@github.com:cismet/beansbinding.git</developerConnection>
+        <url>https://github.com/cismet/beansbinding</url>
     </scm>
+
+    <repositories>
+        <repository>
+            <id>cismet-repo</id>
+            <url>https://repo.cismet.de/repo</url>
+            <releases>
+                <enabled>true</enabled>
+                <checksumPolicy>warn</checksumPolicy>
+                <updatePolicy>daily</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <checksumPolicy>warn</checksumPolicy>
+                <updatePolicy>interval:60</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <properties>
         <!-- 
@@ -64,6 +85,7 @@
     </build>
 
     <profiles>
+        <!-- mscholl: why skip this -->
         <profile>
             <id>skip-jalopy</id>
             <activation>
