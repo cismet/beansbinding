@@ -1,4 +1,4 @@
-beansbinding
+beansbinding [![Build Status](http://ci.cismet.de/buildStatus/icon?job=beansbinding)](https://ci.cismet.de/job/beansbinding/)
 ============
 
 JSR-295 fork with minor changes / improvements
