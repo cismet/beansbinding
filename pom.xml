@@ -10,7 +10,7 @@
 
     <groupId>de.cismet.custom</groupId>
     <artifactId>beansbinding</artifactId>
-    <version>1.2.2-SNAPSHOT</version>
+    <version>4.0</version>
     <packaging>jar</packaging>
 
     <name>beansbinding</name>
@@ -31,7 +31,8 @@
         <connection>https://github.com/cismet/beansbinding.git</connection>
         <developerConnection>scm:git:git@github.com:cismet/beansbinding.git</developerConnection>
         <url>https://github.com/cismet/beansbinding</url>
-    </scm>
+      <tag>v4.0</tag>
+  </scm>
 
     <repositories>
         <repository>
