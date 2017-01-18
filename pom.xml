@@ -5,12 +5,12 @@
     <parent>
         <groupId>de.cismet.cids</groupId>
         <artifactId>cids-parent</artifactId>
-        <version>2.0-SNAPSHOT</version>
+        <version>2.4</version>
     </parent>
 
     <groupId>de.cismet.custom</groupId>
     <artifactId>beansbinding</artifactId>
-    <version>1.2.2-SNAPSHOT</version>
+    <version>4.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>beansbinding</name>
@@ -31,7 +31,8 @@
         <connection>https://github.com/cismet/beansbinding.git</connection>
         <developerConnection>scm:git:git@github.com:cismet/beansbinding.git</developerConnection>
         <url>https://github.com/cismet/beansbinding</url>
-    </scm>
+      <tag>HEAD</tag>
+  </scm>
 
     <repositories>
         <repository>
@@ -81,7 +82,7 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <destFileName>beansbinding-1.2.1.jar</destFileName>
+                                    <destFileName>beansbinding-4.0.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
