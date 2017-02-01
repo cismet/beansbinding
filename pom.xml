@@ -27,7 +27,17 @@
     </scm>
 
     <properties>
+        <!-- 
+            FIXME: remove deprecated de.cismet.libDir property required for cids 
+            legacy distribution when switching to cismet-parent.pom 
+        -->
         <de.cismet.libDir>lib/ext</de.cismet.libDir>
+        
+        <!--
+            skip jalopy code re-formatting to preserve original code format and 
+            thus to to allow push request / rebasing 
+        -->
+        <jalopy.skip>true</jalopy.skip>
     </properties>
     
     <!-- 
@@ -50,17 +60,4 @@
         -->
         <finalName>beansbinding-1.2.1</finalName>
     </build>
-
-    <!--
-        skip jalopy code re-formatting to preserve original code format and thus 
-        to to allow push request / rebasing
-    -->
-    <profiles>
-        <profile>
-            <id>skip-jalopy</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-    </profiles>
 </project>
