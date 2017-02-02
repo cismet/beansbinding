@@ -18,14 +18,7 @@
 
     <name>beansbinding</name>
     <description>cismet beansbinding fork</description>
-
-    <scm>
-        <connection>https://github.com/cismet/beansbinding.git</connection>
-        <developerConnection>scm:git:git@github.com:cismet/beansbinding.git</developerConnection>
-        <url>https://github.com/cismet/beansbinding</url>
-        <tag>HEAD</tag>
-    </scm>
-
+    
     <properties>
         <!-- 
             FIXME: remove deprecated de.cismet.libDir property required for cids 
@@ -39,7 +32,24 @@
         -->
         <jalopy.skip>true</jalopy.skip>
     </properties>
+
+    <scm>
+        <connection>https://github.com/cismet/beansbinding.git</connection>
+        <developerConnection>scm:git:git@github.com:cismet/beansbinding.git</developerConnection>
+        <url>https://github.com/cismet/beansbinding</url>
+        <tag>HEAD</tag>
+    </scm>
     
+    <ciManagement>
+        <system>jenkins</system>
+        <url>https://ci.cismet.de/job/beansbinding/</url>
+    </ciManagement>
+    
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/cismet/beansbinding/issues</url>
+    </issueManagement>
+
     <!-- 
         TODO define versions in dependency management section of ext-libs-bom 
     -->  
