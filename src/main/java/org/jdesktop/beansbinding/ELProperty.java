@@ -186,7 +186,7 @@ public final class ELProperty<S, V> extends PropertyHelper<S, V> {
         }
 
         private void cleanup() {
-            for (RegisteredListener rl : registeredListeners) {
+            for (RegisteredListener rl : new ArrayList<>(registeredListeners)) {
                 unregisterListener(rl, this);
             }
 
@@ -321,10 +321,12 @@ public final class ELProperty<S, V> extends PropertyHelper<S, V> {
                 property = property.intern();
             }
 
-            for (RegisteredListener rl : registeredListeners) {
-                if (rl.getSource() == source && (property == null || rl.getProperty() == property)) {
-                    processSourceChanged();
-                    break;
+            if (registeredListeners != null) {
+                for (RegisteredListener rl : registeredListeners) {
+                    if (rl.getSource() == source && (property == null || rl.getProperty() == property)) {
+                        processSourceChanged();
+                        break;
+                    }
                 }
             }
         }
