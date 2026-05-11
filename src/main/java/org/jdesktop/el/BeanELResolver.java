@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
+import javax.swing.JOptionPane;
 
 /**
  * Defines property resolution behavior on objects using the JavaBeans
@@ -110,10 +111,15 @@ public class BeanELResolver extends ELResolver {
                                                                                 
         public BeanProperties(Class<?> baseClass) {
             this.baseClass = baseClass;
-            PropertyDescriptor[] descriptors;
+            PropertyDescriptor[] descriptors = new PropertyDescriptor[0];
             try {
+                //workaround: for base class DefaultBindableRefernceCombobox, Introspector.getBeanInfo will 
+                //throw a null pointer exception
                 BeanInfo info = Introspector.getBeanInfo(baseClass);
                 descriptors = info.getPropertyDescriptors();
+            } catch (NullPointerException e) {
+                System.out.println("Introspector: " + baseClass);
+//                JOptionPane.showMessageDialog(null, "Introspector: " + baseClass, "Error", JOptionPane.ERROR_MESSAGE);
             } catch (IntrospectionException ie) {
                 throw new ELException(ie);
             }
